@@ -12,7 +12,7 @@ app=Flask("__name__")
 
 
 # Define upload_form() and route the webapp 
-@app.route('/',methods=['POST'])
+@app.route('/')
 
 def upload_form():
 	return render_template('upload.html')
