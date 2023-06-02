@@ -9,10 +9,10 @@ from werkzeug.utils import secure_filename
 
 # Define flask 
 app=Flask("__name__")
-@app.route('/',methods=['POST'])
 
 
 # Define upload_form() and route the webapp 
+@app.route('/',methods=['POST'])
 
 def upload_form():
 	return render_template('upload.html')
@@ -24,7 +24,7 @@ def upload_form():
 @app.route('/index.html',methods=['POST'])
 def upload_video():
 	file=request.files['file']
-	secure_filename(file.filename)
+	filename=secure_filename(file.filename)
 	file.save(os.path.join('static/',filename))
 	return render_template('upload.html',filename=filename)
 
