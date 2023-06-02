@@ -10,27 +10,35 @@
 <body>
 
 <center>
+<!-- start writing below -->
 
 <h1>Video Processing</h1><hr>
-
 <h2>Select a video file to upload and Convert it into Black & White Video</h2><br>
 
-<form method="post" action="/" enctype="multipart/form-data">
-
-	<input  class="btn btn-warning btn-lg" type="file" name="file"><br>
-	<input class="btn btn-primary btn-lg" type="Submit">
-
-</form><br>
-
-<video autoplay="autoplay" controls="controls"  >
-	<source src="{{ url_for('write display_video() here', filename=filename) }}" type="video/mp4"></source>
-</video><br>
-
-<!-- Add Download button code below  -->
-<a class="btn btn-success btn-lg" href="{{url_for('download_file')}}">Download black and white video</a>
+<form method="POST" action="/"enctype="multipart/form-data">
+	<input type="file" class="btn btn-primary" name="file">
+	<br>
+	<br>
+	<input type="submit" class="btn btn-success">
+</form>
+<br>
+<video autoplay="autoplay" controls="controls">
+<source src="url_for(display_video(),filename)" type="video/mp4">
+</source>
+</video>
 
 
-<!-- Code ends  -->
+
+
+<br>
+
+
+
+
+
+
+
+<!-- end -->
 </center>
 
 </body>
